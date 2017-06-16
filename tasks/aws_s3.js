@@ -693,9 +693,9 @@ module.exports = function (grunt) {
 			if (object.src.substr(lastDot) === '.gz') {
 
 				var originalPath = object.src.substr(0, lastDot)
-
+				
 				object.params = _.defaults({
-					ContentType: mime.contentType(mime.lookup(originalPath) || "application/octet-stream"),
+					ContentType: mime.lookup(mime.lookup(originalPath) || "application/octet-stream"),
 					ContentEncoding: 'gzip'
 				}, object.params || {})
 
