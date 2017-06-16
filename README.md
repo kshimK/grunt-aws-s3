@@ -2,6 +2,9 @@
 
 > Interact with AWS S3 using AWS SDK
 
+## Patch
+A patch was added as S3 is not able to decode contents with gzip and charset=utf-8. This new repo has fix for that. Only 1 line is changed from the original file aws_s3.js, which is to use mime.lookup instead of mime.ContentType.
+
 ## Warning 
 
 Versions 0.4.0 to 0.5.0 have a bug where `options.params` is ignored.  
