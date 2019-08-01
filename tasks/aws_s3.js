@@ -694,7 +694,7 @@ module.exports = function (grunt) {
 				var originalPath = object.src.substr(0, lastDot)
 				
 				object.params = _.defaults({
-					ContentType: mime.lookup(mime.lookup(originalPath) || "application/octet-stream"),
+					ContentType: mime.lookup(originalPath) || "application/octet-stream-gzip",
 					ContentEncoding: 'gzip'
 				}, object.params || {})
 
